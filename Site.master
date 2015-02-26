@@ -1,0 +1,285 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/Layout.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:PlaceHolder runat="server">           
+        <script src="<%: ResolveUrl("~/Scripts/modernizr-2.5.3.js") %>"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </asp:PlaceHolder>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+
+     <script>
+
+         function IsChecked() {
+             var nameSelect = new Array();
+             var selcted = false;
+             var selcted2 = false;
+             var selcted3 = false;
+             var selcted4 = false;
+             var selcted5 = false;
+
+             var name = "";
+             var name2 = "";
+             var name3 = "";
+             var name4 = "";
+             var name5 = "";
+
+
+             if (document.getElementById("mainContent_chkMon").checked) {
+
+                 selcted = true;
+                 name = "mainContent_drpMon";
+                 nameSelect[0] = name;
+
+             }
+             if (document.getElementById("mainContent_chkTue").checked) {
+
+                 selcted = true;
+                 name = "mainContent_drpTue";
+                 nameSelect[1] = name;
+
+             }
+             if (document.getElementById("mainContent_chkWed").checked) {
+
+                 selcted = true;
+                 name = "mainContent_drpWed";
+                 nameSelect[2] = name;
+
+             }
+             if (document.getElementById("mainContent_chkThu").checked) {
+
+                 selcted = true;
+                 name = "mainContent_drpThu";
+                 nameSelect[3] = name;
+             }
+             if (document.getElementById("mainContent_chkFri").checked) {
+
+                 selcted = true;
+                 name = "mainContent_drpFri";
+                 nameSelect[4] = name;
+             }
+
+             if (nameSelect.length == 0) {
+                 alert("You must at least select one day of the week!");
+                 return false;
+             }
+             else {
+
+                 var e, flag = false;
+
+                 for (i = 0 ; i < nameSelect.length; i++) {
+
+                     e = document.getElementById(nameSelect[i]);
+                     //alert('name' + nameSelect[i]);
+                     //alert('e' + e);
+
+                     if (e != null) {
+                         if (e.selectedIndex > 0)
+                             flag = true;
+                         else {
+                             flag = false;
+                             break;
+                         }
+                     }
+                     else {
+                         flag = false;
+
+                     }
+                 }
+                 if (flag)
+                     return true;
+                 else {
+                     alert("Please select the correct session!");
+                     return false;
+                 }
+             }
+         }
+    </script>
+
+    <style type="text/css">
+        .auto-style1 {
+            background-color: #FFFFFF;
+            border: 1px solid #f3f3f3;
+            border-collapse: collapse;
+            height: 23px;
+        }
+    </style>
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=edge">--%>
+</head>
+
+<body>
+
+
+ <form id="mainFrom" runat="server" >
+
+    <ajaxToolkit:ToolkitScriptManager ID="ScriptManager" runat="server"  EnablePageMethods="true" EnablePartialRendering="true">
+    </ajaxToolkit:ToolkitScriptManager>
+
+    <div align="center" >
+        <table cellspacing="0" cellpadding="0" align="center" border="0">
+            <!-- Outer Table Start -->
+            <tr>
+                <!-- r1 Start -->
+                <td width="2" rowspan="5"> 
+                </td>
+                <td>
+                </td>
+                <td height="6">
+                </td>
+                <td> 
+                </td>
+                <td width="2" rowspan="5">
+                </td>
+            </tr>
+            <tr>
+                <!-- r2 Start -->
+                <td  background="images/top_lef.gif" height="16px" width="16px" >
+                </td>
+                <td background="images/top_mid.gif" height="16px" runat="server" >
+                </td>
+                <td background="images/top_rig.gif" height="16px" width="16px" >
+                </td>
+            </tr>
+            <tr>
+                <!-- r3 Start , This contains most basic things -->
+                <td background="images/cen_lef.gif" >
+                </td>
+                <td>
+                    <table class="tblMain" cellpadding="0" border="0">
+                        <!-- Table main Start -->
+                        <tr>
+                            <td valign="top">
+                                <!-- Logo Div -->
+                                <div id="logo_div">
+                                    <a href="http://www.ifsworld.com/" target="_top">
+                                        <img src="~/Images/ifs_logo.png" runat="server"></a>
+                                </div>
+                                <div id="divTopNavHead" class="tblTopNavHeadName">
+                                                IFS&nbsp;Juniors&nbsp;Attendance&nbsp;Forecast
+                                </div>  
+                                <!-- LogoBar Top Navigator Start-->
+                                <table border="0" width="100%" cellspacing="0" cellpadding="0" class="tblTopNavTop">
+                                    <tr>
+                                        <td>
+                                            <a href="/default.asp" target="_top">
+                                                <img src="images/logobar_left.jpg" ></a>
+                                        </td>
+                                        <td width="100%">
+                                        </td>
+                                        <td>
+                                            <img src="images/logobar_right.jpg">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" width="100%" cellspacing="0" cellpadding="0" class="tblTopNav">
+                                    <tr>
+                                        <td class="tblTopNavPubName" align="left">
+                                            <img src="images/dot_blank.gif" width="80" height="4">
+                                        </td>
+                                        <td>
+                                                                   
+                                        </td>
+                                        <td width="100%" align="right" class="tblTopNavPubName" style="padding-right:6px">
+                                       <h3 class="pageTopBanner">Welcome &nbsp;<%= LogOnUser %></h3> 
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!----LogoBar Top Navigator End ---->
+                            </td>
+                        </tr>
+                        <!-- Main Navigation -->
+                        <tr><td style="text-align:right">
+                            <asp:Literal runat="server" id="today_lable" EnableViewState="false"/>
+                            <td></tr>
+                        <tr>
+                            <td class="tblMainMenuBod">
+                                <table class="tblMainMenuBg" cellspacing="0" cellpadding="0" width="100%">                               
+                                     <tr>
+
+                                           <td></td>
+                                            
+                                            <br>
+                                            <div style="float:left" class="btn-group" role="group" >
+                                               <%--<asp:Button ID="btHome" class= "btn btn-default" runat="server" Text="Home" OnClick="btHome_Click"/>
+                                               <asp:Button ID="btMyPortal" class= "btn btn-default" runat="server" Text="My Portal"  OnClick="btMyPortal_Click"     />
+                                               <asp:Button ID="btConditions" class= "btn btn-default" runat="server" Text="Conditions"  OnClick="btConditions_Click"   />                                             
+                                               <asp:Button ID="btAdminPortal" class= "btn btn-default" runat="server" Text="Admin Portal" OnClick="btAdminPortal_Click" />--%>
+                                                <asp:LinkButton ID="btHome" class= "btn btn-default" runat="server" OnClick="btHome_Click"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Home</asp:LinkButton>
+                                                <asp:LinkButton ID="btMyPortal" class= "btn btn-default" runat="server" OnClick="btMyPortal_Click"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;My Portal</asp:LinkButton>
+                                                <asp:LinkButton ID="btConditions" class= "btn btn-default" runat="server" OnClick="btConditions_Click"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;&nbsp;Conditions</asp:LinkButton>
+                                                <asp:LinkButton ID="btAdminPortal" class= "btn btn-default" runat="server" OnClick="btAdminPortal_Click"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>&nbsp;&nbsp;Admin Portal</asp:LinkButton>
+                                                
+                                            </div>                                             
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Main Navigation -->
+
+                        <tr>
+                            <td class="auto-style1">
+
+                            <div id="mainDiv" >
+               
+                               <asp:ContentPlaceHolder ID="mainContent" runat="server"> 
+                                   
+                                </asp:ContentPlaceHolder>
+                                               
+                            </div> 
+                                <!-- ContentArea Start -->
+                                
+                            </td>
+                        </tr>
+                        <!--Footer Image Start-->
+                        <tr>
+                            <td background="Images/footerGraphic.jpg" runat="server" height="22">
+                                <img class="noBorderImg" height="1" src="images/dot_blank.gif" width="1"
+                                    border="0">
+                            </td>
+                        </tr>
+                        <!--Footer End-->
+                    </table>
+                    <!------------------------ End Table Main ----------------->
+                </td>
+                <td background="images/cen_rig.gif" runat="server">
+               </td>
+            </tr>
+            <!-- r3 End -->
+            <!--Footer Start-->
+            <tr>
+                <!-- r4 Start -->
+                <td>
+                    <img height="16" src="images/bot_lef.gif" runat="server" width="16">
+                </td>
+                <td>
+                 <img height="16" src="images/bot_mid.gif" style="width:100%;" runat="server">
+                </td>
+                <td>
+                    <img height="16" src="images/bot_rig.gif" runat="server" width="16">
+                </td>
+            </tr>
+            
+        </table>
+        <!-- Outer Table End -->
+    </div>
+
+    <!------------------------------------------------------------------->
+
+
+
+</form>
+</body>
+</html>

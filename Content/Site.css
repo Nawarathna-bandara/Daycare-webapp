@@ -1,0 +1,293 @@
+﻿.outer {width: 800px; font: 12px arial, sans-serif; margin: auto; margin-top: 25px; }		
+#header { width: 100%;  height: 70px;  border: 1px solid #000000; float: left; margin: 2px; background-color:#f8f8f8;}	
+#menu { width: 797px;  height: auto;  float: left; margin-left: 3px; background-color:#f8f8f8;}
+#welcome_bar { width: 800px;  height: 28px;  float: left; margin-bottom:7px; background-color:#ebebeb;}
+#logo_bar { width: 800px;  height: auto;  float: left; background-color:#8C2F8C }
+#navigation { width: 175px;  height: 500px; border: #cbcbcb 0px solid; float: left; background-color:#f5f5f5; margin-top:2px; }
+#content { width: 735px;  height: 520px; margin-left: 16px; padding: 10px;  float: left; margin: 2px; background-color: #ffffff;}
+			 
+
+.body_text
+{
+	font-weight: normal;
+	font-size:small;
+	color: #494949;
+	font-family: Verdana;
+	margin-top:10px;
+	padding:5px;	
+}
+
+.wizard_body_text
+{
+	font-weight: normal;
+	font-size:small;
+	color: #494949;
+	font-family: Verdana;	
+	
+}
+
+.main_body_text
+{
+	/*border-right: #cbcbcb 1px solid;
+	border-top: #cbcbcb 1px solid;
+	background-color: #f8f8f8;
+	border-left: #cbcbcb 1px solid;
+	color: black;
+	border-bottom: #cbcbcb 1px solid;*/
+	font-family: Verdana, sans-serif;
+	font-weight: normal;
+	font-size: 11px;
+	margin: 0px;
+	
+}
+
+#navDiv 
+{
+                width: 200px;
+                float: left;
+                background-color: #ffffff;
+                height:100%;
+               
+}
+
+#mainDiv 
+{
+               /* margin-left: 205px;*/
+               /* height:100%;    this cause internet explorer to show master page displacement */
+                border:1px solid #eee;               
+                
+}
+
+.navigationTable
+{
+    margin-top:45px;
+    margin-left:2px;
+    width:200px;
+    
+    }
+    
+.NaviImageLogo
+{
+    padding-top:10px;
+    }
+    
+.HeadingBackground
+{
+    float: right;    
+    width:100%;   
+    border:1px solid #ab78b0;   
+    background-color:#873e8d;
+    }
+    
+ .main_body_heading
+ {
+     background-color:#7d3483;
+     font-family:Verdana;
+     color:White;
+     font-size:small;
+    font-weight:bold;
+    height:20px;
+    margin-top:8px;
+    float:left;
+    border:1px solid #7d3483; 
+   width:99%;
+    padding-left:10px;
+     }
+   .main_body_content
+ {
+     background-color:#ffffff;
+     font-family:Verdana;
+     color:White;
+     font-size:small;
+    font-weight:bold;
+    height:20px;
+    margin-top:5px;
+    float:left;
+    border:1px solid #7d3483; 
+   width:100%;
+     }  
+     
+.outerDiv
+{
+    float: left; 
+    /*margin-top:18px; */
+    width:97%; 
+    margin-left:10px; 
+    text-align:left;
+}
+
+.mainContentDiv
+{
+    width:99%; 
+    float:left; 
+    border:1px solid #eee;
+    font-weight: normal;
+	font-size:small;
+	color: black;
+	font-family: Verdana;
+	margin-top:10px;
+	padding:5px;
+    }
+    
+#node_desc
+{
+     text-align:justify;   
+}
+
+#node_title
+{
+    font-weight:bold;  
+   
+}
+
+.tblTopNavHeadName
+{
+       font-family: arial, verdana, helvetica, sans-serif;
+       font-size: 1em;
+       color: #FFFFFF;
+       font-weight: 400;
+       height:20px;
+       float:left;   
+       margin:10px; 
+       margin-left:75px; 
+       position:absolute;
+}
+
+
+.divNewsMargin
+{
+	width:100%; 
+	border-bottom-width:1px; 
+	border-bottom-style:dashed; 
+	border-bottom-color:#c0bfc0; 
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.divNewsColumn
+{
+	float:right; 
+	width:200px; 
+	/*margin-top:20px;*/
+}
+
+.divBodyCenterColumn
+{
+	width:500px; 
+	float:left; 
+	padding-right:10px; 
+	border-right:1px solid #eee;	
+}
+
+.divTitleArea
+{
+	width:500px;  
+	float:left; 
+	padding-right:10px; 
+	position:absolute; 
+	top:440px;
+}
+
+.archiveText
+{
+	font-size:11px;	
+}
+
+.tbNewsEntry
+{
+	width:100%;	
+}
+
+.tbNewsEntryArchive
+{
+	width:100%;	
+}
+
+.tbNews
+{
+	font-size:11px;
+	width:100%;	
+}
+
+.pArchvNewsHead
+{
+	 text-align:center;
+	 margin-top:20px;
+}
+
+#divArchiveEntry
+{
+                
+    float:left; 
+    width:860px; 
+    margin-bottom:30px; 
+    margin-left:50px; 
+    text-align:left;
+}
+
+.lnkBtMore
+{
+	padding-top:20px; 	
+}
+
+.MenuStyle
+{
+	color :#ffffff;
+	background-color :#873E8D;
+	font-weight:bold;
+	font-size:12px;
+}
+
+.AtdCalendar .ajax__calendar_container {
+    border:1px solid #646464;
+    background-color: #dddddd;
+    color: #000000;
+ }
+ 
+ .AtdCalendar .ajax__calendar_active 
+ {
+ 	 border:1px solid red;
+ 	 background-color: #f3f3f3;
+ }
+
+.AtdCalendar .ajax__calendar_today 
+{
+ 	 border:1px solid #000000;
+ 	 background-color: #f3f3f3;
+ 	 
+ }
+
+ .AtdCalendar .ajax__calendar_header 
+{
+ 	 border:1px solid #000000;
+ 	 background-color: #f3f3f3;
+ 	 background: rgb(135, 62, 141);
+ 	 color: white;   
+ }
+
+ .AtdCalendar .ajax__calendar_today 
+ {
+	border:1px solid #000000;
+ 	background-color: #f3f3f3;
+ 	background: rgb(135, 62, 141);
+ 	color: white;   
+ } 
+ 
+ .AtdCalendar .ajax__calendar_next
+ {
+	background-image:url(/Images/control_play.png);	
+	padding-top:4px;
+	padding-right:4px;
+	/*background-repeat:no-repeat;	
+	float:right;
+	height:15px;
+	cursor:pointer;*/
+ }
+ 
+ .AtdCalendar .ajax__calendar_prev
+ {
+ 	background-image:url(/Images/control_play_left.png);	
+	padding-top:4px;
+	padding-left:4px;
+ }
+ 

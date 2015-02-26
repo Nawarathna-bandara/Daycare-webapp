@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Oracle.DataAccess.Client;
+using IFS.CoS.ServiceUtil;
+using System.Collections;
+using System.Data;
+using System.Globalization;
+
+public partial class _Default : Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        lbInfo.Visible = true;
+        LbText.Visible = true;
+        
+    }
+}
